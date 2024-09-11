@@ -1,0 +1,48 @@
+
+.nav {
+    background-color: crimson;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    padding: 10px;
+    letter-spacing: 2px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .navlinks {
+    float: right;
+    padding-right: 30px;
+    cursor: pointer;
+  }
+
+  .navlinks ul li {
+    display: inline-block;
+    padding-right: 30px;
+    cursor: pointer;
+  }
+
+  .navlinks ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+  .navborder::after {
+    content: "";
+    width: 0;
+    color: crimson;
+    height: 2px;
+    display: block;
+    transition: width 0.3s ease;
+  }
+
+  .navborder:hover::after {
+    width: 100%;
+  }
