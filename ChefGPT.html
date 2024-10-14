@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Chat Integration</title>
+  <style>
+    /* Style for the floating button */
+    .floating-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background-color: #007bff;
+      color: white;
+      border-radius: 50%;
+      border: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      font-size: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10; /* Ensure button is above the iframe */
+    }
+
+    /* Modal styling */
+    .modal {
+      display: none; 
+      position: fixed; 
+      z-index: 1000; /* Ensure the modal stays on top */
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+      background-color: white;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 400px;
+      height: 500px;
+      position: relative;
+    }
+
+    .modal-content iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 24px;
+      color: #333;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating round button -->
+  <button class="floating-btn" id="openModalBtn">+</button>
+
+  <!-- Modal container -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <!-- AI iframe -->
+      <iframe src="https://www.chefgpt.xyz/features/pantryChef" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <!-- Homepage iframe with z-index set to 1 (above video but behind other elements) -->
+  <iframe src="ChefGPT.html" 
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;" 
+      frameborder="0">
+  </iframe>
+
+  <script>
+    // Get the button, modal, and close elements
+    var modal = document.getElementById("myModal");
+    var openBtn = document.getElementById("openModalBtn");
+    var closeBtn = document.getElementById("closeModal");
+
+    // When the user clicks on the button, open the modal
+    openBtn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on the 'x', close the modal
+    closeBtn.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // Close the modal when clicking outside the modal content
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>

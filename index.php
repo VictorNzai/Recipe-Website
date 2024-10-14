@@ -51,6 +51,10 @@ ul li a:hover {
       </div>
       <a href="Users Management\viewRecipes.php" class="btn">Discover Recipes</a>
     </div>
+    <iframe src="ChefGPT.html" 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;" 
+    frameborder="0">
+</iframe>
 
     <div id="about">
       <div class="container">

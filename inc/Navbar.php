@@ -7,8 +7,8 @@
             <li><a class="navborder" href="../index.php#Recipes">Back To Recipes</a></li>
             <li><a class="navborder" href="">Blog</a></li>
             <li><a class="navborder" href="">Privacy Policy</a></li>
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="my-courses.html">My Courses</a></li>
+            <!-- <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="my-courses.html">My Courses</a></li> -->
         </ul>
     </div>
 

@@ -127,6 +127,34 @@ $result = $stmt->get_result();
             font-weight: bold;
             color:white;
         }
+        /*Sidebar */
+        .sidebar {
+            width: 250px;
+            background-color: #2c3e50;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            padding-top: 20px;
+        }
+
+        .sidebar h2 {
+            color: white;
+            text-align: center;
+        }
+
+        .sidebar a {
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+        }
+
+        .sidebar a:hover {
+            background-color: #34495e;
+        }
+
     </style>
 </head>
 <body>
@@ -134,12 +162,22 @@ $result = $stmt->get_result();
     <div class="container">
         <h1>My Recipes</h1>
         <div class="welcome-message">Welcome, <?php echo htmlspecialchars($_SESSION["username"]); ?>!</div>
-        <div class="button-container">
+        <!-- <div class="button-container">
             <button onclick="location.href='../Recipe Management/addRecipes.html'">Add Recipes</button>
             <button onclick="location.href='recipes.php'">Edit My Recipes</button>
             <button onclick="location.href='users.php'">View my Profile</button>
             <button onclick="window.location.reload();">Refresh</button>
-        </div>
+        </div> -->
+
+        <div class="sidebar">
+        <h2>Admin Panel</h2>
+        <a href="addRecipes.html"><i class="fas fa-edit"></i> Add Recipes</a>
+        <a href="recipes.php"><i class="fas fa-edit"></i> Edit My Recipes</a>
+        <a href="users.php"><i class="fas fa-edit"></i> View my Profile</a>
+        <!-- <a href="recipes.php"><i class="fas fa-edit"></i> Edit My Recipes</a> -->
+        <button onclick="window.location.reload();">Refresh</button>
+    </div>
+
     </div>
     <div class="recipe-container">
         <?php

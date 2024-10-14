@@ -8,7 +8,7 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 
 // Assume $username is set after a successful login
-$username = $_SESSION['username'];
+$username = $_SESSION['username']; 
 
 // Query to fetch recipes owned by the current chef
 $sql = "SELECT recipe_id, recipe_name, recipe_owner, Description, recipe_image FROM tbl_recipe ";
