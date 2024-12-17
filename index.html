@@ -37,10 +37,120 @@ ul li a:hover {
   }
 */
 
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-image: url('../images/Background image 1.jpg');
+        background-size: cover; /* Ensures the image covers the entire body */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat;
+        background-attachment: fixed; /* Keeps the background image fixed in place */
+    }
+    
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background: transparent; /* Make the nav bar background transparent */
+    }
+    
+    .logo {
+        margin-right: 20px;
+        color: white;
+    }
+    
+    .nav-links ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin-right: 20px;
+    }
+    
+    .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-weight:bold;
+    }
+    
+    .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Adjust gap as needed */
+    }
+    
+    .nav-right img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+    
+    
+
 </style>
 
 <?php include 'inc/header.php';?>
+<div class="nav">
+    <div class="logo"><h1>My Food</h1></div>
 
+    <div class="nav-links">
+        <ul>
+            <li><a class="navborder" href="../index.php">Home</a></li>
+            <li><a class="navborder" href="../index.php#Recipes">Back To Recipes</a></li>
+            <li><a class="navborder" href="">Blog</a></li>
+            <li><a class="navborder" href="">Privacy Policy</a></li>
+            <!-- <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="my-courses.html">My Courses</a></li> -->
+        </ul>
+    </div>
+
+    <div class="nav-right">
+        <i class="fas fa-bell"></i>
+        <img src="profile-pic.jpg" alt="Profile Picture">
+    </div>
+</div>
+<link rel="stylesheet" href="style.css?v=1.0">
+</head>
+  <body>
+    <div id="header">
+
+ 
+    <div class="video-container">
+        <video autoplay muted loop id="background-video">
+    <source src="images/Orika Spices TV Commercial - Ultra Slow motion video.mp4" type="video/mp4">
+</video>
+</div>
+
+      <div class="container">
+        <nav>
+          <img src="images/Food Recipe.png" class="logo" />
+          <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#Recipes">Recipe</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+           
+            <!--<li><a href="loginform.html" class="btn">Login</a></li>-->
+          
+
+          <li>
+          <a href="#">Account <img src="images/user.png"alt="Account Icon" style="width:30px; height:30px;"></a>
+          <ul class="dropdown">
+            <li><a href="Users Management/loginform.html">Login</a></li>
+            <li><a href="Users Management/signup.html">Register</a></li>
+            <li><a href="Recipe Management/addRecipes.html">Add Recipe</a></li>
+          </ul>
+          </ul>
+        </li>
+        </nav>
+        <div class="header-text">
           <p>Food connoisseur </p>
           <h1>
             Hi,I am <span>Victor</span><br />
